@@ -5,7 +5,7 @@ namespace FizzBuzz
 {
     public class FizzBuzz
     {
-        public static string GetFizzBuzz(int number)
+        public string GetFizzBuzz(int number)
         {
             var result = "";
 

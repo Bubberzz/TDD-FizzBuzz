@@ -5,66 +5,87 @@ namespace FizzBuzzTest3
     [TestClass]
     public class FizzBuzzTests
     {
-        [TestMethod]
-        public void Result_Should_Not_Be_Null()
+        [DataTestMethod]
+        [DataRow(1)]
+        [DataRow(23)]
+        [DataRow(6346)]
+        [DataRow(834435)]
+        public void Result_Should_Not_Be_Null(int number)
         {
             //Arrange
             var FizzBuzz = new FizzBuzz.FizzBuzz();
 
             //Act
-            var result = global::FizzBuzz.FizzBuzz.GetFizzBuzz(1);
+            var result = FizzBuzz.GetFizzBuzz(number);
 
             //Assert 
             Assert.IsTrue(result != null);
         }
 
-        [TestMethod]
-        public void Result_Should_Be_Fizz()
+        [DataTestMethod]
+        [DataRow(3)]
+        [DataRow(9)]
+        [DataRow(147)]
+        [DataRow(288)]
+        [DataRow(12324)]
+        public void Result_Should_Be_Fizz(int number)
         {
             //Arrange
             var FizzBuzz = new FizzBuzz.FizzBuzz();
 
             //Act
-            var result = global::FizzBuzz.FizzBuzz.GetFizzBuzz(3);
+            var result = FizzBuzz.GetFizzBuzz(number);
 
             //Assert 
             Assert.IsTrue(result == "Fizz");
         }
 
-        [TestMethod]
-        public void Result_Should_Be_Buzz()
+        [DataTestMethod]
+        [DataRow(5)]
+        [DataRow(65)]
+        [DataRow(875)]
+        [DataRow(2345)]
+        public void Result_Should_Be_Buzz(int number)
         {
             //Arrange
             var FizzBuzz = new FizzBuzz.FizzBuzz();
 
             //Act
-            var result = global::FizzBuzz.FizzBuzz.GetFizzBuzz(5);
+            var result = FizzBuzz.GetFizzBuzz(number);
 
             //Assert 
             Assert.IsTrue(result == "Buzz");
         }
 
-        [TestMethod]
-        public void Result_Should_Be_FizzBuzz()
+        [DataTestMethod]
+        [DataRow(30)]
+        [DataRow(345)]
+        [DataRow(765)]
+        [DataRow(245982945)]
+        public void Result_Should_Be_FizzBuzz(int number)
         {
             //Arrange
             var FizzBuzz = new FizzBuzz.FizzBuzz();
 
             //Act
-            var result = global::FizzBuzz.FizzBuzz.GetFizzBuzz(15);
+            var result = FizzBuzz.GetFizzBuzz(number);
 
             //Assert 
             Assert.IsTrue(result == "FizzBuzz");
         }
 
-        [TestMethod]
-        public void Result_Should_Not_Be_FizzBuzz()
+        [DataTestMethod]
+        [DataRow(1)]
+        [DataRow(66)]
+        [DataRow(863)]
+        [DataRow(45647354)]
+        public void Result_Should_Not_Be_FizzBuzz(int number)
         {
             //Arrange
             var FizzBuzz = new FizzBuzz.FizzBuzz();
 
             //Act
-            var result = global::FizzBuzz.FizzBuzz.GetFizzBuzz(1);
+            var result = FizzBuzz.GetFizzBuzz(number);
 
             //Assert 
             Assert.IsFalse(result == "FizzBuzz");

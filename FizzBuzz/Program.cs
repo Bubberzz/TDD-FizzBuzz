@@ -19,7 +19,7 @@ namespace FizzBuzz
                 try
                 {
                     var number = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"This number is: {FizzBuzz.GetFizzBuzz(number)}");
+                    Console.WriteLine($"This number is: {new FizzBuzz().GetFizzBuzz(number)}");
                 }
                 catch
                 {
